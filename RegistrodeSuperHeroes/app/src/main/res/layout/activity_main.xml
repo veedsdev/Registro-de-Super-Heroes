@@ -9,12 +9,88 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="16dp"
         tools:context=".MainActivity">
 
+        <ImageView
+            android:id="@+id/img_hero"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <EditText
+            android:id="@+id/et_hero_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/img_hero"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/img_hero"
+            android:hint="@string/super_hero_name" />
+
+        <EditText
+            android:id="@+id/et_alter_ego"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/img_hero"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/img_hero"
+            android:hint="@string/alter_ego" />
+
+        <View
+            android:id="@+id/V_divisor"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/img_hero"
+            android:layout_marginTop="16dp"
+            android:background="@color/black" />
+
         <TextView
+            android:id="@+id/TV_biography"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/V_divisor"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/biography"
+            android:textColor="@android:color/black"
+            android:textSize="23sp" />
+
+        <EditText
+            android:id="@+id/ET_biography"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_biography"
+            android:hint="@string/short_biography"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/TV_power"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ET_biography"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/power"
+            android:textColor="@android:color/black"
+            android:textSize="23sp" />
+
+        <RatingBar
+            android:id="@+id/RB_power"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:layout_below="@id/TV_power"
+            android:layout_centerHorizontal="true"
+            android:numStars="5"
+            android:progressTint="@color/yellow"
+            tools:rating="3" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/save" />
+
 
     </RelativeLayout>
 </layout>

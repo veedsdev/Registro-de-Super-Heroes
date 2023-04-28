@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="super_hero_name">Nombre de Super Heroe</string>
+    <string name="alter_ego">Alter ego</string>
+    <string name="biography">Biografía</string>
+    <string name="power">Poder</string>
+    <string name="save">Guardar</string>
+    <string name="short_biography">Resumen de biografía</string>
+</resources>
