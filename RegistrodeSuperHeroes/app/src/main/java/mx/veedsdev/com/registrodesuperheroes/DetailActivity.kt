@@ -13,6 +13,8 @@ class DetailActivity : AppCompatActivity() {
         const val POWER_KEY="power"
     }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityDetailBinding.inflate(layoutInflater)
