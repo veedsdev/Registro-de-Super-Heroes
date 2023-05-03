@@ -16,16 +16,14 @@ class MainActivity : AppCompatActivity() {
             val alterEgo = binding.etMainAlterEgo.text.toString()
             val biography = binding.etMainBiography.text.toString()
             val power = binding.rbMainPower.rating
-            openDetailActivity(superHeroName = superHeroName, alterEgo = alterEgo,biography=biography, power = power)
+            val hero = Superhero (name = superHeroName, alterEgo = alterEgo,biography=biography, power = power)
+            openDetailActivity(superhero = hero)
         }
     }
 
-    private fun openDetailActivity(superHeroName : String, alterEgo : String, biography : String, power : Float){
+    private fun openDetailActivity(superhero: Superhero){
         val intent = Intent(this, DetailActivity::class.java)
-        intent.putExtra(DetailActivity.SUPER_HERO_NAME_KEY,superHeroName)
-        intent.putExtra(DetailActivity.ALTER_EGO_KEY,alterEgo)
-        intent.putExtra(DetailActivity.BIOGRAPHY_KEY,biography)
-        intent.putExtra(DetailActivity.POWER_KEY,power)
+        intent.putExtra(DetailActivity.SUPERHERO_KEY,superhero)
         startActivity(intent)
     }
 }

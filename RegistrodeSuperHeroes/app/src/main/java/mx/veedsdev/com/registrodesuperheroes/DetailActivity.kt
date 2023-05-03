@@ -7,10 +7,7 @@ import mx.veedsdev.com.registrodesuperheroes.databinding.ActivityDetailBinding
 class DetailActivity : AppCompatActivity() {
 
     companion object{
-        const val SUPER_HERO_NAME_KEY="superHeroName"
-        const val ALTER_EGO_KEY="alterEgo"
-        const val BIOGRAPHY_KEY="biography"
-        const val POWER_KEY="power"
+        const val SUPERHERO_KEY="superHero"
     }
 
 
@@ -21,15 +18,12 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val bundle = intent.extras!!
-        val superHeroName = bundle.getString(SUPER_HERO_NAME_KEY) ?: "No se encontró el nombre"
-        val alterEgo = bundle.getString(ALTER_EGO_KEY) ?: "No se encontró el Alter Ego"
-        val bio = bundle.getString(BIOGRAPHY_KEY) ?: "No se encontró el Alter Ego"
-        val power = bundle.getFloat(POWER_KEY)
+        val superHero = bundle.getParcelable<Superhero>(SUPERHERO_KEY)!!
 
-        binding.tvDetailHeroName.text = superHeroName
-        binding.tvDetailAlterEgoDescription.text = alterEgo
-        binding.tvDetailBiographyDescription.text = bio
-        binding.rbDetailPower.rating = power
+        binding.tvDetailHeroName.text = superHero.name
+        binding.tvDetailAlterEgoDescription.text = superHero.alterEgo
+        binding.tvDetailBiographyDescription.text = superHero.biography
+        binding.rbDetailPower.rating = superHero.power
 
     }
 }
