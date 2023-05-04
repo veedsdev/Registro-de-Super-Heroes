@@ -19,11 +19,7 @@ class DetailActivity : AppCompatActivity() {
 
         val bundle = intent.extras!!
         val superHero = bundle.getParcelable<Superhero>(SUPERHERO_KEY)!!
-
-        binding.tvDetailHeroName.text = superHero.name
-        binding.tvDetailAlterEgoDescription.text = superHero.alterEgo
-        binding.tvDetailBiographyDescription.text = superHero.biography
-        binding.rbDetailPower.rating = superHero.power
+        binding.superhero = superHero
 
     }
 }

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="superhero"
+            type="mx.veedsdev.com.registrodesuperheroes.Superhero" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,6 +31,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             tools:text="Iron Man"
+            android:text="@{superhero.name}"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,6 +63,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_detail_alter_ego"
+            android:text="@{superhero.alterEgo}"
             tools:text="Tony Stark" />
 
         <TextView
@@ -87,6 +91,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_detail_biography"
+            android:text="@{superhero.biography}"
             tools:text="Genio, millonario, Playboy y filántropo" />
 
         <TextView
@@ -115,6 +120,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_detail_power"
+            android:rating="@{superhero.power}"
             tools:rating="3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
